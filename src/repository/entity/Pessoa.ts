@@ -4,7 +4,7 @@ import { Usuario } from './Usuario';
 
 @Entity()
 /** User representation */
-export class Pessoa extends Usuario {
+export class Pessoa {
   @Column({
     length: 50,
     nullable: false,
@@ -22,4 +22,8 @@ export class Pessoa extends Usuario {
     nullable: false,
   })
   cpf: string;
+
+  // eslint-disable-next-line prettier/prettier
+  @Column(type => Usuario)
+  usuario: Usuario;
 }

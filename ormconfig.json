@@ -13,8 +13,8 @@
         "src/repository/subscriber/*.ts"
     ],
     "cli": {
-        "entitiesDir": "entity",
-        "migrationsDir": "migration",
-        "subscribersDir": "subscriber"
+        "entitiesDir": "entities",
+        "migrationsDir": "migrations",
+        "subscribersDir": "subscribers"
     }
 }

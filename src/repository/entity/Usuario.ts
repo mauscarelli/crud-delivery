@@ -1,9 +1,10 @@
 /* eslint-disable new-cap */
-import { PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
+import { PrimaryGeneratedColumn, Column, OneToMany, Entity } from 'typeorm';
 import { Endereco } from './Endereco';
 
-/** Abstração de usuário */
-export abstract class Usuario {
+@Entity()
+/** Representacao usuario */
+export class Usuario {
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -24,6 +25,8 @@ export abstract class Usuario {
   })
   telefone: string;
 
-  @OneToMany(() => Endereco, (end) => end.usuario)
+  // TODO - Corrigir erro salvando relação
+  // eslint-disable-next-line prettier/prettier
+  @OneToMany(type => Endereco, end => end.usuario, {cascade: true})
   endereco: Endereco[];
 }

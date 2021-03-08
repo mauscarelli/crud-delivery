@@ -38,6 +38,7 @@ export class Endereco {
   })
   UF: string;
 
-  @ManyToOne(() => Usuario, (user) => user.endereco)
+  // eslint-disable-next-line prettier/prettier
+  @ManyToOne(type => Usuario, user => user.endereco)
   usuario: Usuario;
 }
