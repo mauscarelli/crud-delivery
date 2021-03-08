@@ -27,6 +27,7 @@ export class Usuario {
 
   // TODO - Corrigir erro salvando relação
   // eslint-disable-next-line prettier/prettier
-  @OneToMany(type => Endereco, end => end.usuario, {cascade: true})
+  // @OneToMany(type => Endereco, end => end.usuario, {cascade: true})
+  @OneToMany(type => Endereco, end => end.usuario)
   endereco: Endereco[];
 }
