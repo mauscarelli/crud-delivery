@@ -1,5 +1,12 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@controller/*": ["./src/controller/*"],
+      "@model/*": ["./src/model/*"],
+      "@repository/*": ["./src/repository/*"],
+      "@util/*": ["./src/util/*"]
+    },
     "target": "es2017",                                
     "module": "commonjs",                           
     "lib": ["ES6"],                                   
