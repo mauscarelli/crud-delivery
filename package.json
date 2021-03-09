@@ -10,11 +10,15 @@
   "author": "Maurício Arantes",
   "license": "ISC",
   "dependencies": {
+    "@types/dotenv": "^8.2.0",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "knex": "^0.95.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
     "reflect-metadata": "^0.1.13",
-    "sqlite3": "^5.0.2",
-    "typeorm": "^0.2.31",
+    "sequelize": "^6.5.0",
     "typescript": "^4.2.2"
   },
   "devDependencies": {
