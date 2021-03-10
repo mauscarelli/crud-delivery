@@ -61,6 +61,6 @@ describe('Test Pessoa', () => {
   it('should delete an user with index 1', async () => {
     const response = await request(app).delete('/pessoa/1');
 
-    expect(response.statusCode).toEqual(200);
+    expect(response.statusCode).toEqual(204);
   });
 });
