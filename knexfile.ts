@@ -20,4 +20,14 @@ module.exports = {
       directory: `${__dirname}/src/repository/migration`,
     },
   },
+  test: {
+    client: 'sqlite3',
+    connection: {
+      filename: `${__dirname}/tests/test.sqlite`,
+    },
+    migrations: {
+      directory: `${__dirname}/src/repository/migration`,
+    },
+    useNullAsDefault: true,
+  },
 };

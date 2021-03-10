@@ -7,7 +7,7 @@ import { Router } from 'express';
 const routes = Router();
 
 routes.get('/', (req, res) => {
-  res.status(200).json('Server online');
+  res.status(200).json({ message: 'Server online' });
 });
 
 // Routes pessoa

@@ -1,7 +1,9 @@
 import { Knex } from 'knex';
+const knexConfig = require('./../../knexfile');
+require('dotenv').config();
 
-const knexConfig = require('knexfile');
-
-const knex: Knex = require('knex')(knexConfig['development']);
+const knex: Knex = require('knex')(
+  knexConfig[process.env.NODE_ENV === 'test' ? 'test' : 'development']
+);
 
 export = knex;
