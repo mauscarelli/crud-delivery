@@ -87,7 +87,6 @@ export async function update(
   response: Response,
   next: Function
 ) {
-  console.log(request.body);
   try {
     const { rua, numero, cidade, cep, UF, complemento } = request.body;
     const { id } = request.params;
@@ -125,7 +124,7 @@ export async function exclude(
 
     await knex('endereco').where({ id }).del();
 
-    return response.send();
+    return response.status(204).send();
   } catch (error) {
     next(error);
   }

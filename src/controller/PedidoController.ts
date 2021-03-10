@@ -66,7 +66,6 @@ export async function create(
   response: Response,
   next: Function
 ) {
-  console.log(request.body);
   try {
     await knex('pedido').insert(request.body);
     return response.status(201).send();
@@ -87,7 +86,6 @@ export async function update(
   response: Response,
   next: Function
 ) {
-  console.log(request.body);
   try {
     const { detalhePedido, descricao, total } = request.body;
     const { id } = request.params;
@@ -122,7 +120,7 @@ export async function exclude(
 
     await knex('pedido').where({ id }).del();
 
-    return response.send();
+    return response.status(204).send();
   } catch (error) {
     next(error);
   }
